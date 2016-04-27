@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     overflow: hidden;
+    padding:15px;
 }
 
 .container-fluid {
@@ -22,21 +23,38 @@ html, body {
 }
 
 .filters, .facts {
-  padding: 0px;
+  padding:15px;
+  background:white;
+  border: 4px solid #5e666d;
+
+  font-family:'Lato',sans-serif;
 }
 
 .filters {
   min-height: 70%;
   height: 70%;
+
 }
 
 .facts {
   min-height: 30%;
   height: 30%;
+  margin-top: 10px;
 }
 
 
 .map {
   margin: 0px;
   padding: 0px;
+}
+
+.btn-group{
+  white-space: normal
+}
+
+.btn {
+}
+
+.btn:active, .btn:focus, .btn.active:focus, .btn:active:focus {
+  background:red;
 }
