@@ -1,0 +1,5 @@
+community_districts_original.geojson:
+  https://github.com/dwillis/nyc-maps
+
+restaurants/restaurants_raw.csv
+  http://milesgrimshaw.com/nyc-restaurant-database/

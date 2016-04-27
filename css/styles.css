@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.base {
+  height: 100%;
+}
+
+.fill {
+    min-height: 100%;
+    height: 100%;
+}
+
+.right {
+  margin: 0px;
+  padding: 0px;
+}
+
+.filters, .facts {
+  padding: 0px;
+}
+
+.filters {
+  min-height: 70%;
+  height: 70%;
+}
+
+.facts {
+  min-height: 30%;
+  height: 30%;
+}
+
+
+.map {
+  margin: 0px;
+  padding: 0px;
+}
