@@ -6,12 +6,22 @@ html, body {
 }
 
 h2 {
+  text-align: center;
   font-family:"Bitter", serif;
   font-weight:700;
   text-transform: uppercase;
   margin-top:0;
   margin-bottom:10px;
-  font-size:25px;
+  font-size:30px;
+  color:#dacabc;
+}
+
+h3 {
+  font-family:"Lato", sans-serif;
+  font-weight:900;
+  margin:10px 0 8px 0;
+  font-size:15px;
+  color:#5e666d;/*white;*/
 }
 
 .container-fluid {
@@ -34,8 +44,8 @@ h2 {
 
 .filters, .facts {
   padding:15px;
-  background:white;
-  border: 4px solid #5e666d;
+  background:white;/*#5e666d;*/
+  border: 8px solid #5e666d;
 
   font-family:'Lato',sans-serif;
 }
@@ -70,7 +80,7 @@ label {
 }
 
 .btn:active, .btn:focus, .btn.active:focus, .btn:active:focus {
-  background:#5e666d;
-  /*font-weight:900;*/
-  color: white;
+  font-weight:900;
+  color:#5e666d;
+  text-transform: uppercase;
 }
