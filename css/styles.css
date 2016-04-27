@@ -2,6 +2,16 @@ html, body {
     height: 100%;
     overflow: hidden;
     padding:15px;
+    color:#5e666d;
+}
+
+h2 {
+  font-family:"Bitter", serif;
+  font-weight:700;
+  text-transform: uppercase;
+  margin-top:0;
+  margin-bottom:10px;
+  font-size:25px;
 }
 
 .container-fluid {
@@ -42,10 +52,13 @@ html, body {
   margin-top: 10px;
 }
 
-
 .map {
   margin: 0px;
   padding: 0px;
+}
+
+label {
+  display:block;
 }
 
 .btn-group{
@@ -53,8 +66,11 @@ html, body {
 }
 
 .btn {
+  color:#5e666d;
 }
 
 .btn:active, .btn:focus, .btn.active:focus, .btn:active:focus {
-  background:red;
+  background:#5e666d;
+  /*font-weight:900;*/
+  color: white;
 }
