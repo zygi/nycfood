@@ -1,27 +1,25 @@
 html, body {
     height: 100%;
     overflow: hidden;
-    padding:15px;
     color:#5e666d;
 }
 
 h2 {
-  text-align: center;
+  /*text-align: center;*/
   font-family:"Bitter", serif;
-  font-weight:700;
-  text-transform: uppercase;
+  font-weight:400;
+  text-transform: lowercase;
   margin-top:0;
   margin-bottom:10px;
-  font-size:30px;
-  color:#dacabc;
+  font-size:25px;
+  color:white;
 }
 
 h3 {
-  font-family:"Lato", sans-serif;
-  font-weight:900;
-  margin:10px 0 8px 0;
+  text-transform:lowercase;
+  font-family:"Bitter",serif;
   font-size:15px;
-  color:#5e666d;/*white;*/
+  color:white;/*#5e666d;*/
 }
 
 .container-fluid {
@@ -43,32 +41,36 @@ h3 {
 }
 
 .filters, .facts {
-  padding:15px;
-  background:white;/*#5e666d;*/
-  border: 8px solid #5e666d;
-
+  background:#5e666d;
   font-family:'Lato',sans-serif;
 }
 
 .filters {
   min-height: 70%;
   height: 70%;
-
 }
 
 .facts {
   min-height: 30%;
   height: 30%;
-  margin-top: 10px;
+}
+
+.panel-title {
+  height:50px;
+  background:#dacabc;
+  text-align:center;
+}
+
+.sub-panel {
+  height:35px;
+  background:gray;
+  opacity:0.9;
+  text-align:center;
 }
 
 .map {
   margin: 0px;
   padding: 0px;
-}
-
-label {
-  display:block;
 }
 
 .btn-group{
@@ -84,3 +86,4 @@ label {
   color:#5e666d;
   text-transform: uppercase;
 }
+
