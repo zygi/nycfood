@@ -18,6 +18,11 @@ var main = function() {
 		}
 		
 	});
+
+	$('.checkbox').click(function() {
+		$(this).toggleClass('is-checked');
+	});
+
 }
 
 $(document).ready(main());

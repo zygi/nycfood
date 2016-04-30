@@ -11,6 +11,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
@@ -25,18 +28,28 @@
   </head>
   <body>
     <div class="container-fluid base">
+
       <div class="col-md-9 fill map" id="map">
+        <div class="panel-title" style="background:#868C92"><h2>MAP</h2></div>
       </div>
+
       <div class="col-md-3 fill right" id="right">
         <div class="filters" id="filters">
 
           <div class="panel-title"><h2>Filter results</h2></div>
 
           <div class="sub-panel"><h3>step 1: pick cuisines</h3></div>
-            <div class="cuisine-panel">
-            </div>
-          <div class="sub-panel">
-            <h3>step 2: pick overlays</h3>
+          <div class="cuisine-panel">
+          </div>
+
+          <div class="sub-panel"><h3>step 2: pick overlays</h3></div>
+          <div class="overlay-panel">
+            <span style="margin-right:20px" class="checkbox check"></span><p>testing</p>
+            <span style="margin-right:20px" class="checkbox check"></span><p>testing</p>
+            <span style="margin-right:20px" class="checkbox check"></span><p>testing</p>
+            <span style="margin-right:20px" class="checkbox check"></span><p>testing</p>
+            <span style="margin-right:20px" class="checkbox check"></span><p>testing</p>
+             
           </div>
 
 
@@ -53,6 +66,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/behavior.js"></script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="js/map.js"></script>
