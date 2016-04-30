@@ -29,14 +29,22 @@
   <body>
     <div class="container-fluid base">
 
+      <div style="display:none" class="filter-help-panel v-center">
+        <h2>how to build your search <i style="margin:0" id="filter-help-hide" class="fa fa-times-circle" aria-hidden="true"></i></h2>
+        <p style="color:white;font-size:1.75em;margin-top:30px">Your search will filter cuisine types and show you where they fall in NYC...</p>
+      </div>
+
       <div class="col-md-9 fill map" id="map">
         <div class="panel-title" style="background:#868C92"><h2>MAP</h2></div>
       </div>
 
       <div class="col-md-3 fill right" id="right">
+
         <div class="filters" id="filters">
 
-          <div class="panel-title"><h2>Filter results</h2></div>
+          <div class="panel-title">
+            <h2>Filter results <i class="fa fa-question-circle" id="filter-help" aria-hidden="true"></i></h2>
+          </div>
 
           <div class="sub-panel"><h3>step 1: pick cuisines</h3></div>
           <div class="cuisine-panel">
@@ -56,7 +64,7 @@
 
         <div class="facts" id="facts">
           <div class="panel-title">
-            <h2>Fun facts</h2>
+            <h2>Fun facts <i class="fa fa-question-circle" id="facts-help" aria-hidden="true"></i></h2>
           </div>
         </div>
       </div>

@@ -23,6 +23,18 @@ var main = function() {
 		$(this).toggleClass('is-checked');
 	});
 
+	$('#filter-help').click(function() {
+		$('#map').css('opacity','0.05');
+		$('#right').css('opacity','0.05');
+		$('.filter-help-panel').show();
+	});
+
+	$('#filter-help-hide').click(function() {
+		$('.filter-help-panel').hide();
+		$('#map').css('opacity','1.0');
+		$('#right').css('opacity','1.0');
+	});
+
 }
 
 $(document).ready(main());
