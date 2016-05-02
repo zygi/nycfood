@@ -188,6 +188,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   display:block;
   width:300px;
   height:40px;
+  line-height:36px;
   border-bottom: 1px solid #868C92;
 
 
@@ -198,6 +199,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   color:white;
   font-weight:400;
   font-size:1em;
+  line-height: 32px;
 }
 
 .overlay-panel > a:hover > p {
@@ -276,7 +278,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   border-radius: 30px;
   display: block;
   background-color: rgba(0, 0, 0, 0.25);
-  margin:2px;
+  margin: 3px;
   -moz-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
   -o-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
   -webkit-transition: all 0.15s cubic-bezier(0.5, 0, 0, 1.5);
