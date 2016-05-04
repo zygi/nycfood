@@ -3,6 +3,9 @@
 
 var DISTRICT_PATH = 'data/community_districts.geojson';
 var RESTAURANT_POINT_PATH = 'data/restaurants/restaurants.geojson';
+var SUBWAY_PATH = 'data/subway_stations.geojson';
+var FARMERS_MARKET_PATH = 'data/farmers_market_final.geojson';
+var MEDIAN_INCOMES_PATH = 'data/median_incomes.geojson';
 
 var projection;
 var svg;
@@ -77,9 +80,9 @@ function setupMap() {
     // svg.append("rect").attr('width', width).attr('height', height)
     //     .style('stroke', 'black').style('fill', 'red');
 
-    dataG.selectAll('path').data(json.features).enter().append('path')
+    dataG.append('g').selectAll('path').data(json.features).enter().append('path')
         .attr('d', path)
-        .style('fill', 'red')
+        .style('fill', '#ffffcc')
         .style('stroke-width', '2')
         .style('stroke', 'black');
 
@@ -87,11 +90,44 @@ function setupMap() {
       var restPath = d3.geo.path()
         .projection(projection);
 
-      dataG.selectAll('path').data(restJson.features).enter().append('path')
-          .attr('d', restPath)
-          .style('fill', 'white')
-          .style('stroke-width', '1')
-          .style('stroke', 'black');
+      // dataG.selectAll('path').data(restJson.features).enter().append('path')
+      //     .attr('d', restPath)
+      //     .style('fill', 'white')
+      //     .style('stroke-width', '1')
+      //     .style('stroke', 'black');
+
+      d3.json(SUBWAY_PATH, function(subwayJson) {
+        var subwayPath = d3.geo.path()
+          .projection(projection);
+
+        dataG.append('g').selectAll('path').data(subwayJson.features).enter().append('path')
+            .attr('d', subwayPath)
+            .style('fill', 'blue')
+            .style('stroke-width', '1')
+            .style('stroke', 'black');
+
+        d3.json(FARMERS_MARKET_PATH, function(farmersMarketJson) {
+          var subwayPath = d3.geo.path()
+            .projection(projection);
+
+          dataG.append('g').selectAll('path').data(farmersMarketJson.features).enter().append('path')
+              .attr('d', subwayPath)
+              .style('fill', 'yellow')
+              .style('stroke-width', '1')
+              .style('stroke', 'black');
+
+          d3.json(MEDIAN_INCOMES_PATH, function(medInc) {
+            var medInc = d3.geo.path()
+              .projection(projection);
+
+            dataG.append('g').selectAll('path').data(medInc.features).enter().append('path')
+                .attr('d', medInc)
+                .style('fill', 'yellow')
+                .style('stroke-width', '1')
+                .style('stroke', 'black');
+          });
+        });
+      });
     });
   });
 }
@@ -100,4 +136,3 @@ function setupMap() {
 $(function(){
   setupMap();
 });
-
