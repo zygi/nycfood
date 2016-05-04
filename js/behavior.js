@@ -1,6 +1,4 @@
-var cuisineTypes = ['Chinese','Vietnamese','Japanese','Korean','Thai','American','Southern',
-					'Barbecue','Soul Food','Cajun','Jamaican','Irish','Scottish','English',
-					'Diner Food','Pub Food','Americana','Continental','African'];
+var cuisineTypes = ['Restaurants', 'Income', 'Property Value', 'Subway Stops'];
 
 var main = function() {
 
@@ -16,7 +14,7 @@ var main = function() {
 		} else {
 			$(this).removeClass('active');
 		}
-		
+
 	});
 
 	$('.checkbox').click(function() {

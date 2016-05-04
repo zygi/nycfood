@@ -5,7 +5,7 @@ var DISTRICT_PATH = 'data/community_districts.geojson';
 var RESTAURANT_POINT_PATH = 'data/restaurants/restaurants.geojson';
 var SUBWAY_PATH = 'data/subway_stations.geojson';
 var FARMERS_MARKET_PATH = 'data/farmers_market_final.geojson';
-var MEDIAN_INCOMES_PATH = 'data/median_incomes.geojson';
+var MEDIAN_INCOMES_PATH = 'data/incomes_proc2.geojson';
 
 var projection;
 var svg;
@@ -13,13 +13,75 @@ var zoom;
 var path;
 var dataG;
 
+function drawRestaurantHeatmap(dataG, projection, restJson) {
+  // var restPath = d3.geo.path()
+  //   .projection(projection);
+  drawHeatmap(dataG, projection, restJson, '#ff0000');
+  // dataG.selectAll('path').data(restJson.features).enter().append('path')
+  //     .attr('d', restPath)
+  //     .style('fill', 'white')
+  //     .style('stroke-width', '1')
+  //     .style('stroke', 'black');
+}
+
+function drawSubwayNodes(dataG, projection, dataJson) {
+  // var subwayPath = d3.geo.path()
+  //   .projection(projection);
+  //
+  // dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+  //     .attr('d', subwayPath)
+  //     .style('fill', 'blue')
+  //     .style('stroke-width', '1')
+  //     .style('stroke', 'black');
+
+  drawHeatmap(dataG, projection, dataJson, '#0000ff');
+}
+
+function drawFarmersMarketNodes(dataG, projection, dataJson) {
+  var path = d3.geo.path()
+    .projection(projection);
+
+  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+      .attr('d', path)
+      .style('fill', 'yellow')
+      .style('stroke-width', '1')
+      .style('stroke', 'black');
+}
+
+function drawMedianIncomeOverlay(dataG, projection, dataJson) {
+  var medInc = d3.geo.path()
+    .projection(projection);
+
+    // console.log(err);
+  // console.log(medInc.features);
+  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+      .attr('d', medInc)
+      .style('fill', function(a) {
+        return d3.interpolateRgb("#ffffff", "#777777")(a.properties.MHI / 60000.0)
+      })
+      // .style('stroke-width', '1')
+      .style('stroke', 'black');
+}
+
+function drawStateBoundaries(dataG, _path, projection, dataJson) {
+  var path = _path.projection(projection);
+
+  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+      .attr('d', path)
+      .style('fill', '#ffffcc')
+      .style('stroke-width', '2')
+      .style('stroke', 'black');
+}
+
+
+
 function zoomed() {
   // console.log(zoom.scale());
   // projection
   //   .translate(zoom.translate())
   //   .scale(zoom.scale());
   dataG.attr('transform', 'translate(' + zoom.translate() + ')scale(' + zoom.scale() + ')');
-  // dataG.selectAll('path')
+  // dataG.selectAll('g').selectAll('path')
   //     .attr('d', path);
 }
 
@@ -38,11 +100,11 @@ function setupMap() {
 
   dataG = svg.append('g');
 
-  d3.json(DISTRICT_PATH, function(json) {
+  d3.json(DISTRICT_PATH, function(districtJson) {
     // centering approach taken from
     // https://stackoverflow.com/questions/14492284/center-a-map-in-d3-given-a-geojson-object
 
-    var center = d3.geo.centroid(json);
+    var center = d3.geo.centroid(districtJson);
     var scale  = 100000;
     var offset = [width/2, height/2];
     projection = d3.geo.mercator().scale(scale).center(center)
@@ -51,7 +113,7 @@ function setupMap() {
     path = d3.geo.path()
       .projection(projection);
 
-    var bounds  = path.bounds(json);
+    var bounds  = path.bounds(districtJson);
     var hscale  = scale*width  / (bounds[1][0] - bounds[0][0]);
     var vscale  = scale*height / (bounds[1][1] - bounds[0][1]);
     scale   = (hscale < vscale) ? hscale : vscale;
@@ -73,58 +135,16 @@ function setupMap() {
     // new projection
     projection = d3.geo.mercator().center(center)
       .scale(scale).translate(offset);
-    path = path.projection(projection);
-
-    // svg.append('rect').attr('width', width).attr('height', height)
-    //         .style('stroke', 'black').style('fill', 'red');
-    // svg.append("rect").attr('width', width).attr('height', height)
-    //     .style('stroke', 'black').style('fill', 'red');
-
-    dataG.append('g').selectAll('path').data(json.features).enter().append('path')
-        .attr('d', path)
-        .style('fill', '#ffffcc')
-        .style('stroke-width', '2')
-        .style('stroke', 'black');
 
     d3.json(RESTAURANT_POINT_PATH, function(restJson) {
-      var restPath = d3.geo.path()
-        .projection(projection);
-
-      // dataG.selectAll('path').data(restJson.features).enter().append('path')
-      //     .attr('d', restPath)
-      //     .style('fill', 'white')
-      //     .style('stroke-width', '1')
-      //     .style('stroke', 'black');
-
       d3.json(SUBWAY_PATH, function(subwayJson) {
-        var subwayPath = d3.geo.path()
-          .projection(projection);
-
-        dataG.append('g').selectAll('path').data(subwayJson.features).enter().append('path')
-            .attr('d', subwayPath)
-            .style('fill', 'blue')
-            .style('stroke-width', '1')
-            .style('stroke', 'black');
-
         d3.json(FARMERS_MARKET_PATH, function(farmersMarketJson) {
-          var subwayPath = d3.geo.path()
-            .projection(projection);
-
-          dataG.append('g').selectAll('path').data(farmersMarketJson.features).enter().append('path')
-              .attr('d', subwayPath)
-              .style('fill', 'yellow')
-              .style('stroke-width', '1')
-              .style('stroke', 'black');
-
-          d3.json(MEDIAN_INCOMES_PATH, function(medInc) {
-            var medInc = d3.geo.path()
-              .projection(projection);
-
-            dataG.append('g').selectAll('path').data(medInc.features).enter().append('path')
-                .attr('d', medInc)
-                .style('fill', 'yellow')
-                .style('stroke-width', '1')
-                .style('stroke', 'black');
+          d3.json(MEDIAN_INCOMES_PATH, function(medIncJson) {
+            drawStateBoundaries(dataG, path, projection, districtJson)
+            // drawMedianIncomeOverlay(dataG, projection, medIncJson)
+            drawRestaurantHeatmap(dataG, projection, restJson);
+            // drawSubwayNodes(dataG, projection, subwayJson);
+            drawFarmersMarketNodes(dataG, projection, farmersMarketJson)
           });
         });
       });
