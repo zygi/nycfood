@@ -1,0 +1,1890 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bissel Gardens Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84702,
+          40.90151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bronx Borough Hall Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92276,
+          40.82715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Bronx Museum Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90953,
+          40.83102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Co-op City Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.83097,
+          40.87025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Hunts Point Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89088,
+          40.82073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Jacobi  Hospital Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8467,
+          40.85431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Mt. Eden Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90947,
+          40.84305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home N. Central Bronx Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88385,
+          40.88046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Soundview Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87443,
+          40.82905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home St. Marys Park Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91173,
+          40.81099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Healthy Choice Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.886882,
+          40.830746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Familia Verde Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89334,
+          40.84643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Learn it, Grow it, Eat it Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90022,
+          40.83121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lincoln Hospital Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92274,
+          40.81739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marble Hill Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90961,
+          40.8746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mott Haven Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91697,
+          40.80782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York Botanical Garden Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.882303,
+          40.866408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Norwood Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88048,
+          40.88223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkchester Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.86277,
+          40.83301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Poe Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89572,
+          40.86423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Project EATS URBIS Gun Hill Rd. Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84501,
+          40.87013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverdale Neighborhood House Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90313,
+          40.90388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Riverdale Y Sunday Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.912784,
+          40.888442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South Bronx Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92297,
+          40.80913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wholesale Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87989,
+          40.80752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Williamsbridge Square HERBan Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8663,
+          40.87734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Albee Square Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98296,
+          40.6897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bartel-Pritchard Square Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97979,
+          40.66094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bay Ridge Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.03362,
+          40.61724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bensonhurst Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99944,
+          40.60958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boro Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98992,
+          40.6337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brooklyn Borough Hall Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99047,
+          40.69375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brownsville Community Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91048,
+          40.66746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brownsville Pitkin Ave Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91358,
+          40.66925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brownsville Rockaway Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90895,
+          40.66255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bushwick Broadway Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91106,
+          40.69952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bushwick Maria Hernandez Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92539,
+          40.70281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bushwick Myrtle Ave. Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91492,
+          40.69916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carroll Gardens Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99653,
+          40.68106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coney Island Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98337,
+          40.57542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cortelyou Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96617,
+          40.64044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cypress Hills Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87788,
+          40.68206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East New York Farmers' Market I"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88659,
+          40.6647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East New York Farmers' Market II"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8955,
+          40.66075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Far Rock Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.776572,
+          40.595287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flatbush Junction Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9477,
+          40.63286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Greene Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97313,
+          40.68962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Graham Avenue Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94238,
+          40.70235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Army Plaza Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9695,
+          40.67412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenpoint McCarren Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95269,
+          40.72046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Coney Island Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96578,
+          40.58669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Kings Co. Hospital Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94245,
+          40.65588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Marcy Park Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94922,
+          40.69537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hattie Carthan After Church Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94359,
+          40.69024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hattie Carthan Community Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94879,
+          40.68965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "High School for Public Service Youth Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94384,
+          40.65866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Isabahlia Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90234,
+          40.6635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Isabahlia WINTER Farmers' market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90181,
+          40.65817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kensington Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97662,
+          40.64915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Malcolm X Blvd. Community Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92865,
+          40.67975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marcy Plaza Community Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94565,
+          40.68007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McGolrick Park Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94336,
+          40.72444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McGolrick Park WINTER Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94467,
+          40.72481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park Slope Sunday Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98379,
+          40.6722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park Slope Wednesday Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98379,
+          40.6722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkside Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.961895,
+          40.655116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pitkin-Verde Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89525,
+          40.67175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Project EATS Brooklyn Museum Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96348,
+          40.67115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Project EATS Marcus Garvey Village Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91036,
+          40.66432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Red Hook Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00901,
+          40.67198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saratoga Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.915944,
+          40.678507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sunset Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01836,
+          40.64081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Urban Oasis Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93741,
+          40.65621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walt Shamel Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95377,
+          40.67725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Williamsburg Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96139,
+          40.70701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Windsor Terrace PS 154 Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97597,
+          40.65699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anna House Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.72211,
+          40.7125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Washington Organic Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7019,
+          40.83153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spinney Hill Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.70454,
+          40.78414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "125th Street FreshConnect Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94724,
+          40.80912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "82 St. Saint Stephen's Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9506,
+          40.77394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abingdon Square Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00573,
+          40.73755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bowling Green Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01327,
+          40.70453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway French Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.987759,
+          40.751012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chelsea Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00137,
+          40.74651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City Hall Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0063,
+          40.71419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Columbia Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96449,
+          40.80738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dag Hammarskjold Plaza Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96989,
+          40.75298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East 92 St. Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94658,
+          40.78071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Barrio Youth Marqueta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9431,
+          40.79925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Washington Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94229,
+          40.84217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gouverneur Hospital Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98779,
+          40.71321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grass Roots Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94385,
+          40.82365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hamilton Heights Green Youth Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94855,
+          40.82396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home East Harlem Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94564,
+          40.79024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Harlem Hospital Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93985,
+          40.81539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Lenox Ave. Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9489,
+          40.80295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home Metropolitan Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94792,
+          40.78713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home West Harlem Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95404,
+          40.82136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Inwood Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9209,
+          40.86988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lower East Side Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9843,
+          40.71523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marcus Garvey Park HERBan Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94486,
+          40.80501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morningside Park Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95965,
+          40.80116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Sinai Hospital Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95276,
+          40.78918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Project EATS Frederick Douglass Houses Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96822,
+          40.79703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rachel Mae's Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98925,
+          40.71491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rockefeller Center Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97846,
+          40.75907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint Mark's Church Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98682,
+          40.72975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SoHA Square 2 Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95209,
+          40.80394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Staten Island Ferry Whitehall Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01213,
+          40.70155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stuyvesant Town Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97875,
+          40.73146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sugar Hill Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94137,
+          40.830911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tompkins Square Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98353,
+          40.72602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tribeca Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01097,
+          40.7163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tucker Square Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98158,
+          40.77361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Union Square Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99029,
+          40.73712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Water Street at Coenties Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01024,
+          40.70328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West 175th St. Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93847,
+          40.84622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West 57th St. Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98572,
+          40.76792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West 79th St. Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97548,
+          40.78195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West 97th Street Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96701,
+          40.79356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Astoria Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93203,
+          40.76825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Corona Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.86271,
+          40.74988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Culinary Kids Farm Rockaway Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.78804,
+          40.59446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Culinary Kids Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.76384,
+          40.59581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Edgemere Farm Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.77654,
+          40.59536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elmhurst Hospital Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88548,
+          40.7458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest Hills Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84639,
+          40.72188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harvest Home City Line Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.86376,
+          40.67922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackson Heights Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88968,
+          40.75322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jamaica Friday Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.79914,
+          40.70374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jamaica Saturday Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.79914,
+          40.70374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Joseph Addabbo FHC Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.79174,
+          40.59322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Long Island City Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9537,
+          40.74401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pomonok Community Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8141,
+          40.73513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queens Botanical Garden Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.82636,
+          40.75186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queens Farm Farm Stand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.72124,
+          40.74818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queens Hospital Center Farmers' Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.80373,
+          40.71753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queens Hospital Center Farmers' Market II"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.78588,
+          40.68851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ridgewood Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90619,
+          40.70011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rockaway Youthmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.78811,
+          40.59454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Socrates Sculpture Park Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93618,
+          40.76769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sunnyside Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92173,
+          40.74699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint George Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.07791,
+          40.64159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Staten Island Mall Greenmarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.16607,
+          40.58199
+        ]
+      }
+    }
+  ]
+}

@@ -123,11 +123,11 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   height: 50px;
   margin: 5px 10px 5px 10px;
   float: left;
-  
+
   border-radius:5px;
   background: white;
-  opacity:0.65;   
-  
+  opacity:0.65;
+
   text-align:center;
   text-decoration:none;
 }
@@ -176,7 +176,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 
 .overlay-panel {
   width:90%;
-  height:100px;
+  height:100%;
   overflow:auto;
 
   margin-right:auto;
@@ -336,4 +336,3 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 .check.is-checked:after {
   background-color: #bcccda;
 }
-
