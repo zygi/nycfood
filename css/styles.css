@@ -228,6 +228,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   z-index:10;
 
   background:#5e666d;
+  box-shadow:inset 0 0 10px white;
 }
 
 .filter-help-panel > h2 {
