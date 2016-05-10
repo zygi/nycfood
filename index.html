@@ -30,8 +30,15 @@
     <div class="container-fluid base">
 
       <div class="welcome-panel v-center">
-        <h2>Welcome to NYCFood! <i style="margin:0" id="welcome-hide" class="fa fa-times-circle" aria-hidden="true"></i></h2>
-        <p>Start by either choosing a preset search or by building your own.</p>
+        <h2 style="color:#dacabc">Welcome to NYCFood! <i style="margin:0" id="welcome-hide" class="fa fa-times-circle" aria-hidden="true"></i></h2>
+        <p>NYCFood allows you to see how different types of food are distributed in NYC. You can also see how cuisine type (e.g. Chinese) relates to other information such as neighborhood, household income, and property value. Explore, and see what kinds of trends you can find!</p>
+        <p style="color:#dacabc"><b>Some preset searches to get you started:</b></p>
+        <div class="presets">
+          <a class="preset" href="#"><p>Chinese Restaurants vs. Property Value</p></a>
+          <a class="preset" href="#"><p>Fast Food Restaurants vs. Subway Stops</p></a>
+          <a class="preset" href="#"><p>Italian Restaurants vs. Neighborhoods</p></a>
+        </div>
+        <p>Or you can build your own search from scratch!</p>
       </div>
 
       <!-- FILTER HELP PANEL -->
@@ -40,7 +47,7 @@
         <p style="font-size:1.2em;margin:20px 0 20px 0">Your search will allow you visualize how the type of food (e.g. Chinese) relates to other information (e.g. neighborhood). All you have to do is choose the cuisine type and the additional information you want to compare!</p>
         <div id="step1">
           <h2 style="text-align:center">STEP 1</h2>
-          <p style="font-size:1em"><b>Choose one cuisine type.</b> This distribution of restaurants that fall under this category will be shown on the map in red.</p>
+          <p style="font-size:1em"><b>Choose one cuisine type.</b> The distribution of restaurants that fall under this category will be shown on the map in red.</p>
         </div>
         <div id="step2">
           <h2 style="text-align:center">STEP 2</h2>
@@ -63,6 +70,7 @@
 
           <div class="sub-panel"><h3>step 1: pick a cuisine</h3></div>
           <div class="cuisine-panel">
+            <!-- cuisine types inserted here -->
           </div>
 
           <div class="sub-panel"><h3>step 2: pick an extra dataset</h3></div>

@@ -12,7 +12,6 @@ var main = function() {
 
 
 	$('.cuisine-panel > a').click(function() {
-		console.log("CUISINE CHOSEN");
 		var chosen = document.getElementsByClassName("cuisine active");
 		var numChosen = chosen.length;
 
@@ -22,7 +21,6 @@ var main = function() {
 		} else {
 			$(this).removeClass('active');
 		}
-
 	});
 
 	$('.checkbox').click(function() {

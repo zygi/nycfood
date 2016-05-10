@@ -138,7 +138,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   padding-left:10px;
 }
 
-.panel-title > h2, .sub-panel > h3, .cuisine-panel > a > p, .v-center {
+.panel-title > h2, .sub-panel > h3, .cuisine-panel > a > p, .v-center, .preset > p {
   position:relative;
   top:50%;
   transform:translateY(-50%);
@@ -157,7 +157,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   margin-top:15px;
 }
 
-.cuisine-panel > a {
+.cuisine-panel > a, .preset {
   width: 80px;
   height: 50px;
   margin: 5px 10px 5px 10px;
@@ -171,12 +171,19 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   text-decoration:none;
 }
 
-.cuisine-panel > a > p {
+.preset {
+  width:120px;
+  height:80px;
+  padding:3px;
+  margin:5px 15px 5px 15px;
+}
+
+.cuisine-panel > a > p, .preset > p {
   font-weight:400;
 }
 
 
-.cuisine-panel > a.active {
+.cuisine-panel > a.active, .preset.active {
   -webkit-animation: wiggle 0.3s ease-out;
   -moz-animation: wiggle 0.3s ease-out;
   -o-animation: wiggle 0.3s ease-out;
@@ -186,8 +193,9 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   opacity:1.0;
 }
 
-.cuisine-panel > a:hover {
+.cuisine-panel > a:hover, .preset:hover {
   opacity:1.0;
+  text-decoration: none;
 }
 
 .overlay-panel {
@@ -232,7 +240,15 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   /*z-index:-100;*/
 }
 
+/*WELCOME PANEL*/
 
+.presets {
+  width:450px;
+  height:90px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:20px;
+}
 
 /*HELP PANEL*/
 
