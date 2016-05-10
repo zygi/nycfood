@@ -1,9 +1,36 @@
+@keyframes wiggle {
+  0%, 50%, 100% {transform:rotate(0deg);}
+  25% {transform:rotate(3deg);}
+  75% {transform:rotate(-3deg);}
+}
+
+@-webkit-keyframes wiggle {
+  0%, 50%, 100% {-webkit-transform:rotate(0deg);}
+  25% {-webkit-transform:rotate(3deg);}
+  75% {-webkit-transform:rotate(-3deg);}
+}
+
+@-moz-keyframes wiggle {
+  0%, 50%, 100% {-moz-transform:rotate(0deg);}
+  25% {-moz-transform:rotate(3deg);}
+  75% {-moz-transform:rotate(-3deg);}
+}
+
+@-o-keyframes wiggle {
+  0%, 50%, 100% {-o-transform:rotate(0deg);}
+  25% {-o-transform:rotate(3deg);}
+  75% {-o-transform:rotate(-3deg);}
+}
+
+
+
+
+
 html, body {
+    width:100%;
     height: 100%;
     overflow: hidden;
     color:#5e666d;
-    scrollbar-face-color:white;
-    scrollbar-track-color:black;
 }
 
 ::-webkit-scrollbar {
@@ -67,14 +94,15 @@ p {
 }
 
 .filters {
-  min-height: 70%;
-  height: 70%;
+  min-height: 100%;
+  height: 100%;
+  overflow:auto;
 }
 
-.facts {
+/*.facts {
   min-height: 30%;
   height: 30%;
-}
+}*/
 
 .panel-title {
   height:50px;
@@ -109,8 +137,9 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .cuisine-panel {
+  position:relative;
   width:90%;
-  height:200px;
+  height:45%;
   overflow:auto;
 
   margin-right:auto;
@@ -136,29 +165,6 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   font-weight:400;
 }
 
-@keyframes wiggle {
-  0%, 50%, 100% {transform:rotate(0deg);}
-  25% {transform:rotate(3deg);}
-  75% {transform:rotate(-3deg);}
-}
-
-@-webkit-keyframes wiggle {
-  0%, 50%, 100% {-webkit-transform:rotate(0deg);}
-  25% {-webkit-transform:rotate(3deg);}
-  75% {-webkit-transform:rotate(-3deg);}
-}
-
-@-moz-keyframes wiggle {
-  0%, 50%, 100% {-moz-transform:rotate(0deg);}
-  25% {-moz-transform:rotate(3deg);}
-  75% {-moz-transform:rotate(-3deg);}
-}
-
-@-o-keyframes wiggle {
-  0%, 50%, 100% {-o-transform:rotate(0deg);}
-  25% {-o-transform:rotate(3deg);}
-  75% {-o-transform:rotate(-3deg);}
-}
 
 .cuisine-panel > a.active {
   -webkit-animation: wiggle 0.3s ease-out;
@@ -175,8 +181,9 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .overlay-panel {
+  position:relative;
   width:90%;
-  height:100%;
+  height:30%;
   overflow:auto;
 
   margin-right:auto;
@@ -188,18 +195,19 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   display:block;
   width:300px;
   height:40px;
-  line-height:36px;
-  border-bottom: 1px solid #868C92;
+  /*border-bottom: 1px solid #868C92;*/
 
+  color:white;
+  font-weight:400;
+  font-size:1em;
+  line-height: 18px;
 
   text-decoration:none;
 }
 
-.overlay-panel > p {
-  color:white;
-  font-weight:400;
-  font-size:1em;
-  line-height: 32px;
+.overlay-panel > p > span.detail {
+  opacity:0.7;
+  font-size:0.8em;
 }
 
 .overlay-panel > a:hover > p {

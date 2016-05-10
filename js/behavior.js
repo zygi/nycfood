@@ -1,16 +1,24 @@
-var cuisineTypes = ['Restaurants', 'Income', 'Property Value', 'Subway Stops'];
+// var cuisineTypes = ['Restaurants', 'Income', 'Property Value', 'Subway Stops'];
+var cuisineTypes = ['Chinese', 'Japanese', 'Vietnamese', 'Thai', 'Korean',
+					'American','Southern','Soul Food','Cajun', 'Jamaican',
+					'Irish','Scottish','English','Pub Food','Fast Food', 'African',
+					'Cuban','German','Other'];
 
 var main = function() {
 
 	for (var i=0; i<cuisineTypes.length; i++) {
-		$('.cuisine-panel').append('<a href="#"><p>'+cuisineTypes[i]+'</p></a>');
+		$('.cuisine-panel').append('<a class="cuisine" href="#"><p>'+cuisineTypes[i]+'</p></a>');
 	}
 
 
 	$('.cuisine-panel > a').click(function() {
 		console.log("CUISINE CHOSEN");
+		var chosen = document.getElementsByClassName("cuisine active");
+		var numChosen = chosen.length;
+
 		if (!$(this).hasClass('active')) {
-			$(this).addClass('active');
+			if (numChosen < 1) {$(this).addClass('active');}
+			else {alert("Oops! You can only choose one cuisine type for now.");}
 		} else {
 			$(this).removeClass('active');
 		}
@@ -18,7 +26,10 @@ var main = function() {
 	});
 
 	$('.checkbox').click(function() {
-		$(this).toggleClass('is-checked');
+		var checks = document.getElementsByClassName("checkbox is-checked");
+		var numChecked = checks.length;
+		if (numChecked < 1) {$(this).toggleClass('is-checked');}
+		else {alert("Oops! You can only choose one extra dataset for now.");}
 	});
 
 	$('#filter-help').click(function() {
