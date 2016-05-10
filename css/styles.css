@@ -65,7 +65,7 @@ h3 {
 
 p {
   font-family:"Lato",sans-serif;
-  font-weight:300;
+  /*font-weight:300;*/
   color:#5e666d;
   font-size:0.9em;
 }
@@ -206,7 +206,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .overlay-panel > p > span.detail {
-  opacity:0.7;
+  font-weight:300;
   font-size:0.8em;
 }
 
@@ -219,14 +219,15 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   margin: 0px;
   padding: 0px;
   background:white;/*#9A9FA4;*/
+  /*z-index:-100;*/
 }
 
 
 /*HELP PANEL*/
 
 .filter-help-panel, .welcome-panel {
-  width:60%;
-  height:80%;
+  width:50%;
+  /*height:80%;*/
   padding:25px;
 
   position:absolute;
@@ -236,11 +237,16 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   z-index:10;
 
   background:#5e666d;
-  box-shadow:inset 0 0 10px white;
+  border-radius:10px;
+  /*box-shadow:inset 0 0 5px white;*/
 }
 
 .filter-help-panel > h2 {
-  font-size:4em;
+  font-size:3em;
+}
+
+.filter-help-panel > p {
+  font-weight:300;
 }
 
 .filter-help-panel i {
@@ -253,7 +259,8 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   width:48%;
   height:50%;
   background:#dacabc;
-  padding:20px;
+  padding:15px;
+  border-radius:10px;
 }
 
 #step1 {
@@ -263,8 +270,6 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 #step2 {
   float:right;
 }
-
-
 
 
 

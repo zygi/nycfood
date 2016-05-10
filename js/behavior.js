@@ -18,7 +18,7 @@ var main = function() {
 
 		if (!$(this).hasClass('active')) {
 			if (numChosen < 1) {$(this).addClass('active');}
-			else {alert("Oops! You can only choose one cuisine type for now.");}
+			else {alert("Oops! You can only choose one cuisine type for now.");} //TODO
 		} else {
 			$(this).removeClass('active');
 		}
@@ -28,8 +28,12 @@ var main = function() {
 	$('.checkbox').click(function() {
 		var checks = document.getElementsByClassName("checkbox is-checked");
 		var numChecked = checks.length;
-		if (numChecked < 1) {$(this).toggleClass('is-checked');}
-		else {alert("Oops! You can only choose one extra dataset for now.");}
+		if (!$(this).hasClass('is-checked')) {
+			if (numChecked < 1) {$(this).toggleClass('is-checked');}
+			else {alert("Oops! You can only choose one extra dataset for now.");} //TODO
+		} else {
+			$(this).removeClass('is-checked');
+		}
 	});
 
 	$('#filter-help').click(function() {
