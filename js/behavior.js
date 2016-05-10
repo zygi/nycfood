@@ -37,15 +37,21 @@ var main = function() {
 	});
 
 	$('#filter-help').click(function() {
-		$('#map').css('opacity','0.05');
-		$('#right').css('opacity','0.05');
+		$('#map').addClass('faded');
+		$('#right').addClass('faded');
 		$('.filter-help-panel').show();
 	});
 
 	$('#filter-help-hide').click(function() {
 		$('.filter-help-panel').hide();
-		$('#map').css('opacity','1.0');
-		$('#right').css('opacity','1.0');
+		$('#map').removeClass('faded');
+		$('#right').removeClass('faded');
+	});
+
+	$('#welcome-hide').click(function() {
+		$('.welcome-panel').hide();
+		$('#map').removeClass('faded');
+		$('#right').removeClass('faded');
 	});
 
 }

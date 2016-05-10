@@ -99,10 +99,10 @@ p {
   overflow:auto;
 }
 
-/*.facts {
-  min-height: 30%;
-  height: 30%;
-}*/
+.faded {
+  pointer-events:none;
+  opacity:0.05;
+}
 
 .panel-title {
   height:50px;
@@ -121,6 +121,16 @@ i.fa-question-circle, i.fa-times-circle {
 i.fa-question-circle:hover, i.fa-times-circle:hover {
   opacity:1.0;
 }
+
+#map-help {
+  padding:10px;
+  font-size:2.5em;
+  float:left;
+}
+
+
+
+/*PANELS*/
 
 .sub-panel {
   height:35px;
@@ -223,12 +233,13 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 
+
 /*HELP PANEL*/
 
 .filter-help-panel, .welcome-panel {
   width:50%;
   /*height:80%;*/
-  padding:25px;
+  padding:40px;
 
   position:absolute;
   left: 0;
@@ -241,15 +252,17 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   /*box-shadow:inset 0 0 5px white;*/
 }
 
-.filter-help-panel > h2 {
+.filter-help-panel > h2, .welcome-panel > h2 {
   font-size:3em;
 }
 
-.filter-help-panel > p {
-  font-weight:300;
+.filter-help-panel > p, .welcome-panel > p {
+  color:white;
+  font-size:1.2em;
 }
 
-.filter-help-panel i {
+
+.filter-help-panel i, .welcome-panel i {
   color:white;
 }
 
@@ -257,7 +270,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   position:relative;
   display:inline;
   width:48%;
-  height:50%;
+  height:150px;
   background:#dacabc;
   padding:15px;
   border-radius:10px;

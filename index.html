@@ -29,27 +29,31 @@
   <body>
     <div class="container-fluid base">
 
-<!--       <div class="welcome-panel v-center">
-      </div> -->
+      <div class="welcome-panel v-center">
+        <h2>Welcome to NYCFood! <i style="margin:0" id="welcome-hide" class="fa fa-times-circle" aria-hidden="true"></i></h2>
+        <p>Start by either choosing a preset search or by building your own.</p>
+      </div>
 
+      <!-- FILTER HELP PANEL -->
       <div style="display:none" class="filter-help-panel v-center">
         <h2>how to build your search <i style="margin:0" id="filter-help-hide" class="fa fa-times-circle" aria-hidden="true"></i></h2>
-        <p style="color:white;font-size:1.5em;margin:20px 0 20px 0">Your search will filter cuisine types and show you where they fall in NYC...</p>
+        <p style="font-size:1.2em;margin:20px 0 20px 0">Your search will allow you visualize how the type of food (e.g. Chinese) relates to other information (e.g. neighborhood). All you have to do is choose the cuisine type and the additional information you want to compare!</p>
         <div id="step1">
-          <h2>STEP 1</h2>
-          <p>description</p>
+          <h2 style="text-align:center">STEP 1</h2>
+          <p style="font-size:1em"><b>Choose one cuisine type.</b> This distribution of restaurants that fall under this category will be shown on the map in red.</p>
         </div>
         <div id="step2">
-          <h2>STEP 2</h2>
-          <p>description</p>
+          <h2 style="text-align:center">STEP 2</h2>
+          <p style="font-size:1em"><b>Choose one extra dataset.</b> This dataset will be shown in the map in blue. This extra information will allow you to see what cuisine type is related to.</p>
         </div>
       </div>
 
-      <div style="opacity:1" class="col-md-9 fill map" id="map">
+      <div class="col-md-9 fill map faded" id="map">
         <!-- <div class="panel-title" style="background:#868C92"><h2>MAP</h2></div> -->
+        <i class="fa fa-question-circle" id="map-help" aria-hidden="true"></i>
       </div>
 
-      <div style="opacity:1" class="col-md-3 fill right" id="right">
+      <div class="col-md-3 fill right faded" id="right">
 
         <div class="filters" id="filters">
 
