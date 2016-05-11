@@ -122,7 +122,7 @@ ol li {
 }
 
 i.fa-question-circle, i.fa-times-circle {
-  float:right;
+  /*float:right;*/
   opacity:0.5;
   margin-right:10px;
   cursor:pointer;
@@ -133,9 +133,10 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 #map-help {
-  padding:10px;
-  font-size:2.5em;
   float:left;
+  display:inline;
+  padding-right:10px;
+  line-height:35.2px;
 }
 
 
