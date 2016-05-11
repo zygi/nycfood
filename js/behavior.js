@@ -5,7 +5,8 @@ var cuisineTypes = ['All', 'Ice Cream','Mexican','Cafe','Latin',
 'Delicatessen','Caribbean','Other','Unknown'];
 
 window.hideLoading = function() {
-	
+	$(".loader-wrapper").fadeOut();
+	$('.welcome-panel').fadeIn();
 }
 
 var hideWelcome = function() {
@@ -21,7 +22,10 @@ var activateCuisine = function(name) {
 			cuisines.item(i).className = 'cuisine active';
 		}
 	}
-	window.redrawThings({cuisine: name});
+	window.redrawThings({
+		cuisine: name,
+		add: true
+	});
 }
 
 var activateDataset = function(name) {
@@ -31,7 +35,10 @@ var activateDataset = function(name) {
 			dsets.item(i).previousSibling.className = 'checkbox check is-checked';
 		}
 	}
-	window.redrawThings({dataset: name});
+	window.redrawThings({
+		dataset: name,
+		add: true
+	});
 }
 
 var main = function() {
@@ -130,8 +137,8 @@ var main = function() {
 	});
 
 	$('#italian-preset').click(function() {
-		activateCuisine('Italian');
-		activateDataset('Neighborhoods');
+		activateCuisine('Cafe');
+		activateDataset('Subway Stops');
 		hideWelcome();
 	});
 

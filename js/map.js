@@ -4,6 +4,7 @@
 var DISTRICT_PATH = 'data/community_districts.geojson';
 var RESTAURANT_POINT_PATH = 'data/restaurants/restaurants_with_cats.geojson';
 var SUBWAY_PATH = 'data/subway_stations.geojson';
+var NEIGHBORHOOD_NAME_PATH = 'data/neighborhood_names.geojson';
 var FARMERS_MARKET_PATH = 'data/farmers_market_final.geojson';
 var MEDIAN_INCOMES_PATH = 'data/incomes_proc2.geojson';
 
@@ -58,6 +59,21 @@ function drawMedianIncomeOverlay(dataG, projection) {
       .style('stroke', 'black');
 }
 
+function drawNeighborhoods(dataG, projection) {
+  var mypath = d3.geo.path()
+    .projection(projection);
+  dataG.append('g').selectAll('.label').data(Data.neighborhoods.features).enter()
+          .append('svg:text')
+          // .attr('d', mypath)
+          .attr("class", "halo")
+          .attr("transform", function (d) { return "translate(" + mypath.centroid(d) + ")rotate(30)"; })
+          .style('text-anchor', 'middle')
+          .attr('font-size', '5pt')
+          .text(function(d) {
+              return d.properties.name
+          });
+}
+
 function drawPropertyValueOverlay(dataG, projection) {
   var medInc = d3.geo.path()
     .projection(projection);
@@ -80,16 +96,7 @@ function drawStateBoundaries(dataG, _path, projection) {
   dataG.append('g').selectAll('path').data(Data.census.features).enter().append('path')
       .attr('d', medInc)
       .style('fill', "transparent")
-      // .style('stroke-width', '1')
       .style('stroke', 'black');
-
-  // var path = _path.projection(projection);
-  //
-  // dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
-  //     .attr('d', path)
-  //     .style('fill', '#ffffcc')
-  //     .style('stroke-width', '2')
-  //     .style('stroke', 'black');
 }
 
 var Data = {
@@ -97,7 +104,8 @@ var Data = {
   coarseBoundaries: null,
   census: null,
   farmersMarkets: null,
-  subway: null
+  subway: null,
+  neighborhoods: null
 };
 
 var State = {
@@ -108,11 +116,7 @@ var State = {
 window.loaded = false;
 
 window.redrawThings = function(params) {
-  console.log('redrawing');
   if ('cuisine' in params && params.add) {
-    // if (params.cuisine === 'All') {
-      // State.cuisine = ['All'];
-    // }
     State.cuisine[params.cuisine] = true;
   } else if ('cuisine' in params && params.remove) {
     delete State.cuisine[params.cuisine];
@@ -127,14 +131,16 @@ window.redrawThings = function(params) {
 
   drawStateBoundaries(dataG, path, projection, Data.coarseBoundaries);
 
-  if (State.dataset == "Farmer's Markets") {
+  if (State.dataset && State.dataset.trim() == "Farmer's Markets".trim()) {
     drawFarmersMarketNodes(dataG, projection)
-  } else if (State.dataset == "Subway Stops") {
+  } else if (State.dataset && State.dataset.trim() == "Subway Stops".trim()) {
     drawSubwayNodes(dataG, projection)
-  } else if (State.dataset == "Income ") {
+  } else if (State.dataset && State.dataset.trim() == "Income ".trim()) {
     drawMedianIncomeOverlay(dataG, projection)
-  } else if (State.dataset == "Property Value ") {
+  } else if (State.dataset && State.dataset.trim() == "Property Value ".trim()) {
     drawPropertyValueOverlay(dataG, projection)
+  } else if (State.dataset && State.dataset.trim() == "Neighborhoods".trim()) {
+    drawNeighborhoods(dataG, projection)
   }
 
 
@@ -145,13 +151,7 @@ window.redrawThings = function(params) {
 }
 
 function zoomed() {
-  // console.log(zoom.scale());
-  // projection
-  //   .translate(zoom.translate())
-  //   .scale(zoom.scale());
-  dataG.attr('transform', 'translate(' + zoom.translate() + ')scale(' + zoom.scale() + ')');
-  // dataG.selectAll('g').selectAll('path')
-  //     .attr('d', path);
+  dataG.attr('transform', 'translate(' + zoom.translate() + ')scale(' + (zoom.scale()) + ')rotate(-30)');
 }
 
 function setupMap() {
@@ -160,12 +160,13 @@ function setupMap() {
   $('svg').remove();
 
   var width = $('#map').width();
-  var height = $('#map').height();
+  var height = $('#map').height() - 30;name
 
   svg = d3.select($('#map')[0])
     .append('svg')
     .attr('width', width)
-    .attr('height', height);
+    .attr('height', height)
+    .style('margin-top', '15px');
 
   dataG = svg.append('g');
 
@@ -175,7 +176,7 @@ function setupMap() {
 
     var center = d3.geo.centroid(districtJson);
     var scale  = 100000;
-    var offset = [width/2, height/2];
+    var offset = [width, height * 2 / 3.0];
     projection = d3.geo.mercator().scale(scale).center(center)
         .translate(offset);
 
@@ -192,7 +193,7 @@ function setupMap() {
 
     zoom = d3.behavior.zoom()
         // .translate([width / 2, height / 2])
-        // .scale(scale)
+        .scale(2.5)
         // .scaleExtent([scale, 20 * scale])
         .scaleExtent([1, 20])
         .on('zoom', zoomed);
@@ -205,19 +206,22 @@ function setupMap() {
     projection = d3.geo.mercator().center(center)
       .scale(scale).translate(offset);
 
-
     d3.json(RESTAURANT_POINT_PATH, function(restJson) {
       d3.json(SUBWAY_PATH, function(subwayJson) {
         d3.json(FARMERS_MARKET_PATH, function(farmersMarketJson) {
           d3.json(MEDIAN_INCOMES_PATH, function(medIncJson) {
-            Data.restaurants = restJson;
-            Data.subway = subwayJson;
-            Data.census = medIncJson;
-            Data.farmersMarkets = farmersMarketJson;
-            Data.coarseBoundaries = districtJson;
-            window.loaded = true;
-            // drawSubwayNodes(dataG, projection, subwayJson);
-            // drawFarmersMarketNodes(dataG, projection, farmersMarketJson)
+            d3.json(NEIGHBORHOOD_NAME_PATH, function(neighbJson) {
+              Data.restaurants = restJson;
+              Data.subway = subwayJson;
+              Data.census = medIncJson;
+              Data.farmersMarkets = farmersMarketJson;
+              Data.coarseBoundaries = districtJson;
+              Data.neighborhoods = neighbJson;
+              window.loaded = true;
+              window.hideLoading();
+              // drawSubwayNodes(dataG, projection, subwayJson);
+              // drawFarmersMarketNodes(dataG, projection, farmersMarketJson)
+            });
           });
         });
       });

@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/loader.css" rel="stylesheet">
+    <link href="css/svg-styles.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -28,12 +29,11 @@
   </head>
   <body>
     <div class="container-fluid base">
-
-      <div class="loading-panel">
-
+      <div class="loader-wrapper">
+        <div class="loader">Loading...</div>
       </div>
 
-      <div class="welcome-panel v-center">
+      <div class="welcome-panel v-center" style="display:none">
         <div class="welcome-left">
         </div>
         <div class="welcome-right">
@@ -42,7 +42,7 @@
           <p style="color:#dacabc;margin-top:25px;text-align:center;font-family:'Dosis',sans-serif;text-transform:uppercase;font-size:1.3em">Choose an option to get started:</p>
           <div class="presets">
             <a class="preset" id="fast-food-preset" href="#"><p>Fast Food Restaurants vs. Property Value</p></a>
-            <a class="preset" id="italian-preset" href="#"><p>Italian</br> Restaurants vs. Neighborhoods</p></a>
+            <a class="preset" id="italian-preset" href="#"><p>Cafes</br> vs. Subway Stops</p></a>
             <a class="preset" id="scratch-preset" href="#"><p>Build a Search</br> From Scratch</p></a>
           </div>
         </div>
@@ -100,7 +100,7 @@
           <div class="sub-panel"><h3>step 2: pick an extra dataset</h3></div>
           <div class="overlay-panel">
             <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Farmer's Markets</br><span class="detail">The locations of NYC farmer's markets</span></p>
-            <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Neighborhoods</br><span class="detail">The names of neighborhoods (e.g. Chelsea)</span></p>
+            <!-- <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Neighborhoods</br><span class="detail">The names of neighborhoods (e.g. Chelsea)</span></p> -->
             <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Subway Stops</br><span class="detail">The locations of subway stops</span></p>
             <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Income</br><span class="detail">The household income as a heat map</span> </p>
             <span style="margin-right:20px" class="checkbox check"></span><p class="dataset">Property Value</br><span class="detail">The value of property as a heat map</span> </p>

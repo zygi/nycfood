@@ -1,0 +1,21 @@
+/*
+  Solution taken from here: http://bl.ocks.org/pgiraud/9f400d54ce2ea7b4f820
+*/
+
+svg {
+    font-family: sans-serif;
+}
+
+svg text {
+  color: black;
+  font-weight: 800;
+  font-family: sans-serif;
+
+}
+
+svg text.halo {
+    opacity: 1;
+    stroke: #fff;
+    stroke-width: 0.2pt;
+    stroke-miterlimit: 1;
+}

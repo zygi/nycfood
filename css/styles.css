@@ -250,7 +250,6 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   background:white;/*#9A9FA4;*/
   /*z-index:-100;*/
 }
-
 /*WELCOME PANEL*/
 
 .presets {
@@ -344,14 +343,16 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   float:right;
 }
 
+/*LOADER*/
+.loader-wrapper {
+  position:absolute;
+  top: 50%;  /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
 
+      transform: translate(-50%, -50%); /* This is a shorthand of
+                                           translateX(-50%) and translateY(-50%) */
 
-
-
-
-
-
-
+}
 
 /*CHECKBOX ICON*/
 
