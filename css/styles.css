@@ -225,7 +225,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 
 .overlay-panel > p > span.detail {
   font-weight:300;
-  font-size:0.8em;
+  font-size:0.85em;
 }
 
 .overlay-panel > a:hover > p {
@@ -251,9 +251,8 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 
 /*HELP PANEL*/
 
-.filter-help-panel, .welcome-panel {
-  width:50%;
-  /*height:80%;*/
+.filter-help-panel, .welcome-panel, .map-help-panel {
+  width:45%;
   padding:40px;
 
   position:absolute;
@@ -267,20 +266,20 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .welcome-panel {
-  width:700px;
+  width:650px;
 }
 
-.filter-help-panel > h2, .welcome-panel > h2 {
+.filter-help-panel > h2, .welcome-panel > h2, .map-help-panel > h2 {
   font-size:3em;
 }
 
-.filter-help-panel > p, .welcome-panel > p {
+.filter-help-panel > p, .welcome-panel > p, .map-help-panel > p {
   color:white;
   font-size:1.2em;
 }
 
 
-.filter-help-panel i, .welcome-panel i {
+.filter-help-panel i, .welcome-panel i, .map-help-panel i {
   color:white;
 }
 

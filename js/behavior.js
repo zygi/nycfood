@@ -30,18 +30,27 @@ var activateDataset = function(name) {
 
 var main = function() {
 
+	// INITIALIZE CUISINE CHOICES
+
 	for (var i=0; i<cuisineTypes.length; i++) {
 		$('.cuisine-panel').append('<a class="cuisine" href="#"><p>'+cuisineTypes[i]+'</p></a>');
 	}
 
+	// FILTER PANEL
 
 	$('.cuisine-panel > a').click(function() {
 		var chosen = document.getElementsByClassName("cuisine active");
 		var numChosen = chosen.length;
 
 		if (!$(this).hasClass('active')) {
-			if (numChosen < 1) {$(this).addClass('active');}
-			else {alert("Oops! You can only choose one cuisine type for now.");} //TODO
+			if (numChosen >= 1) {
+				for (var i=0; i<chosen.length; i++) {
+					if (chosen.item(i).className.indexOf('active') > -1) {
+						chosen.item(i).className = 'cuisine';
+					}
+				}
+			};
+			$(this).addClass('active')
 		} else {
 			$(this).removeClass('active');
 		}
@@ -51,28 +60,44 @@ var main = function() {
 		var checks = document.getElementsByClassName("checkbox is-checked");
 		var numChecked = checks.length;
 		if (!$(this).hasClass('is-checked')) {
-			if (numChecked < 1) {$(this).toggleClass('is-checked');}
-			else {alert("Oops! You can only choose one extra dataset for now.");} //TODO
+			if (numChecked >= 1) { //switch selection
+				for (var i=0; i<checks.length; i++) {
+					if (checks.item(i).className.indexOf('is-checked') > -1) {
+						checks.item(i).className = 'checkbox check';
+					}
+				}
+			} 
+			$(this).toggleClass('is-checked');
 		} else {
 			$(this).removeClass('is-checked');
 		}
 	});
+
+	// HELP PANELS
 
 	$('#filter-help').click(function() {
 		$('#map').addClass('faded');
 		$('#right').addClass('faded');
 		$('.filter-help-panel').show();
 	});
-
 	$('#filter-help-hide').click(function() {
 		$('.filter-help-panel').hide();
 		$('#map').removeClass('faded');
 		$('#right').removeClass('faded');
 	});
 
-	$('#welcome-hide').click(function() {
-		hideWelcome();
+	$('#map-help').click(function() {
+		$('#map').addClass('faded');
+		$('#right').addClass('faded');
+		$('.map-help-panel').show();
 	});
+	$('#map-help-hide').click(function() {
+		$('.map-help-panel').hide();
+		$('#map').removeClass('faded');
+		$('#right').removeClass('faded');
+	});
+
+	// WELCOME PANEL
 
 	$('#fast-food-preset').click(function() {
 		activateCuisine('Fast Food');
