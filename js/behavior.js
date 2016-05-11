@@ -1,8 +1,12 @@
 // var cuisineTypes = ['Restaurants', 'Income', 'Property Value', 'Subway Stops'];
-var cuisineTypes = ['Chinese', 'Japanese', 'Vietnamese', 'Thai', 'Korean',
-					'American', 'Italian', 'Southern','Soul Food','Cajun', 'Jamaican',
-					'Irish','Scottish','English','Pub Food','Fast Food', 'African',
-					'Cuban','German','Other'];
+var cuisineTypes = ['All', 'Ice Cream','Mexican','Cafe','Latin',
+'Sandwiches','Pizza','Japanese','Spanish','Italian','Chinese',
+'Chicken','French','Donuts','Bakery','American',
+'Delicatessen','Caribbean','Other','Unknown'];
+
+window.hideLoading = function() {
+	
+}
 
 var hideWelcome = function() {
 	$('.welcome-panel').hide();
@@ -45,17 +49,25 @@ var main = function() {
 		var numChosen = chosen.length;
 
 		if (!$(this).hasClass('active')) { //selecting an item
-			if (numChosen >= 1) { //switch selection
-				for (var i=0; i<chosen.length; i++) {
-					if (chosen.item(i).className.indexOf('active') > -1) {
-						chosen.item(i).className = 'cuisine';
-					}
-				}
-			};
+			// if (numChosen >= 1) { //switch selection
+			// 	for (var i=0; i<chosen.length; i++) {
+			// 		if (chosen.item(i).className.indexOf('active') > -1) {
+			// 			chosen.item(i).className = 'cuisine';
+			// 		}
+			// 	}
+			// };
 			$(this).addClass('active')
+			window.redrawThings({
+				cuisine: $(this).text(),
+				add: true
+			});
 			// activateDataset(chosen.innerHTML);
 		} else { //deselecting an item
 			$(this).removeClass('active');
+			window.redrawThings({
+				cuisine: $(this).text(),
+				remove: true
+			});
 		}
 	});
 
@@ -69,10 +81,16 @@ var main = function() {
 						checks.item(i).className = 'checkbox check';
 					}
 				}
-			} 
+			}
 			$(this).toggleClass('is-checked');
+			window.redrawThings({
+				dataset: $(this).next("p").clone().children().remove().end().text()
+			});
 		} else { //deselecting an item
 			$(this).removeClass('is-checked');
+			window.redrawThings({
+				dataset: null
+			});
 		}
 	});
 
@@ -103,7 +121,10 @@ var main = function() {
 	// WELCOME PANEL
 
 	$('#fast-food-preset').click(function() {
-		activateCuisine('Fast Food');
+		activateCuisine('Chicken');
+		activateCuisine('Pizza');
+		activateCuisine('Donuts');
+		activateCuisine('Sandwiches');
 		activateDataset('Property Value');
 		hideWelcome();
 	});

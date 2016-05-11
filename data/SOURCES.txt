@@ -3,3 +3,6 @@ community_districts_original.geojson:
 
 restaurants/restaurants_raw.csv
   http://milesgrimshaw.com/nyc-restaurant-database/
+
+everything else:
+  NYCopendata

@@ -2,7 +2,7 @@
 /*global $:false, d3: false*/
 
 var DISTRICT_PATH = 'data/community_districts.geojson';
-var RESTAURANT_POINT_PATH = 'data/restaurants/restaurants.geojson';
+var RESTAURANT_POINT_PATH = 'data/restaurants/restaurants_with_cats.geojson';
 var SUBWAY_PATH = 'data/subway_stations.geojson';
 var FARMERS_MARKET_PATH = 'data/farmers_market_final.geojson';
 var MEDIAN_INCOMES_PATH = 'data/incomes_proc2.geojson';
@@ -14,66 +14,82 @@ var path;
 var dataG;
 
 function drawRestaurantHeatmap(dataG, projection, restJson) {
-  // var restPath = d3.geo.path()
-  //   .projection(projection);
-  drawHeatmap(dataG, projection, restJson, '#ff0000');
-  // dataG.selectAll('path').data(restJson.features).enter().append('path')
-  //     .attr('d', restPath)
-  //     .style('fill', 'red')
-  //     .style('stroke-width', '0.5')
-  //     .style('stroke', 'black')
-  //     .attr('opacity', 0.5);
-      
+  drawHeatmap(dataG, projection, restJson, '#ff0000', State.cuisine);
 }
 
-function drawSubwayNodes(dataG, projection, dataJson) {
+function drawSubwayNodes(dataG, projection) {
   var subwayPath = d3.geo.path()
-    .projection(projection);
-  
-  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+    .projection(projection)
+    .pointRadius(function(d) { return 2; });
+
+  dataG.append('g').selectAll('path').data(Data.subway.features).enter().append('path')
       .attr('d', subwayPath)
       .style('fill', 'blue')
-      .style('stroke-width', '1')
+      .style('stroke-width', '0.5')
       .style('stroke', 'black');
 
   // drawHeatmap(dataG, projection, dataJson, '#0000ff');
 }
 
-function drawFarmersMarketNodes(dataG, projection, dataJson) {
+function drawFarmersMarketNodes(dataG, projection) {
   var path = d3.geo.path()
-    .projection(projection);
+    .projection(projection)
+    .pointRadius(function(d) { return 2; });
 
-  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+  dataG.append('g').selectAll('path').data(Data.farmersMarkets.features).enter().append('path')
       .attr('d', path)
-      .style('fill', 'yellow')
-      .style('stroke-width', '1')
+      .style('fill', 'blue')
+      .style('stroke-width', '0.5')
       .style('stroke', 'black');
 }
 
-function drawMedianIncomeOverlay(dataG, projection, dataJson) {
+function drawMedianIncomeOverlay(dataG, projection) {
   var medInc = d3.geo.path()
     .projection(projection);
 
-    // console.log(err);
-  // console.log(medInc.features);
-  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+  var vals = Data.census.features.map(function(a) {return a.properties.MHI;}).filter(function(a) {return a > 0});
+  var max = 60000//Math.max.apply(Math, vals);
+  var min = Math.min.apply(Math, vals);
+  dataG.append('g').selectAll('path').data(Data.census.features).enter().append('path')
       .attr('d', medInc)
       .style('fill', function(a) {
-        return d3.interpolateRgb("#ffffff", "#cccccc")(a.properties.MHI / 60000.0)
+        return d3.interpolateRgb("#ffffff", "#cccccc")((a.properties.MHI - min) / (max - min))
       })
-      // .style('fill', "white")
-      // .style('stroke-width', '1')
       .style('stroke', 'black');
 }
 
-function drawStateBoundaries(dataG, _path, projection, dataJson) {
-  var path = _path.projection(projection);
+function drawPropertyValueOverlay(dataG, projection) {
+  var medInc = d3.geo.path()
+    .projection(projection);
 
-  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
-      .attr('d', path)
-      .style('fill', '#ffffcc')
-      .style('stroke-width', '2')
+  var vals = Data.census.features.map(function(a) {return a.properties.MED_VAL;}).filter(function(a) {return a > 0});
+  var max = Math.max.apply(Math, vals) / 2.5;
+  var min = Math.min.apply(Math, vals);
+  dataG.append('g').selectAll('path').data(Data.census.features).enter().append('path')
+      .attr('d', medInc)
+      .style('fill', function(a) {
+        return d3.interpolateRgb("#ffffff", "#cccccc")((a.properties.MED_VAL - min) / (max - min))
+      })
       .style('stroke', 'black');
+}
+
+function drawStateBoundaries(dataG, _path, projection) {
+  var medInc = d3.geo.path()
+    .projection(projection);
+
+  dataG.append('g').selectAll('path').data(Data.census.features).enter().append('path')
+      .attr('d', medInc)
+      .style('fill', "transparent")
+      // .style('stroke-width', '1')
+      .style('stroke', 'black');
+
+  // var path = _path.projection(projection);
+  //
+  // dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+  //     .attr('d', path)
+  //     .style('fill', '#ffffcc')
+  //     .style('stroke-width', '2')
+  //     .style('stroke', 'black');
 }
 
 var Data = {
@@ -85,27 +101,47 @@ var Data = {
 };
 
 var State = {
-  cuisine: null,
+  cuisine: {},
   dataset: null
 }
 
 window.loaded = false;
 
 window.redrawThings = function(params) {
-  if ("cuisine" in params) {
-    State.cuisine = params.cuisine
+  console.log('redrawing');
+  if ('cuisine' in params && params.add) {
+    // if (params.cuisine === 'All') {
+      // State.cuisine = ['All'];
+    // }
+    State.cuisine[params.cuisine] = true;
+  } else if ('cuisine' in params && params.remove) {
+    delete State.cuisine[params.cuisine];
   }
   if ("dataset" in params) {
     State.dataset = params.dataset
   }
-  
+
   console.log(State);
-  
+
   dataG.selectAll('g').remove();
-  
+
   drawStateBoundaries(dataG, path, projection, Data.coarseBoundaries);
-  drawMedianIncomeOverlay(dataG, projection, Data.census);
-  drawRestaurantHeatmap(dataG, projection, Data.restaurants);
+
+  if (State.dataset == "Farmer's Markets") {
+    drawFarmersMarketNodes(dataG, projection)
+  } else if (State.dataset == "Subway Stops") {
+    drawSubwayNodes(dataG, projection)
+  } else if (State.dataset == "Income ") {
+    drawMedianIncomeOverlay(dataG, projection)
+  } else if (State.dataset == "Property Value ") {
+    drawPropertyValueOverlay(dataG, projection)
+  }
+
+
+
+  if (!jQuery.isEmptyObject(State.cuisine)) {
+    drawRestaurantHeatmap(dataG, projection, Data.restaurants);
+  }
 }
 
 function zoomed() {
@@ -169,7 +205,7 @@ function setupMap() {
     projection = d3.geo.mercator().center(center)
       .scale(scale).translate(offset);
 
-    
+
     d3.json(RESTAURANT_POINT_PATH, function(restJson) {
       d3.json(SUBWAY_PATH, function(subwayJson) {
         d3.json(FARMERS_MARKET_PATH, function(farmersMarketJson) {

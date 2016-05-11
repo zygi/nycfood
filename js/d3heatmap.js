@@ -1,8 +1,45 @@
 'use strict';
 /*global $:false, d3: false*/
 
-var cellSizeX = 0.001;
-var cellSizeY = 0.001;
+/* Array.filter polyfill, taken from
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
+if (!Array.prototype.filter) {
+  Array.prototype.filter = function(fun/*, thisArg*/) {
+    'use strict';
+
+    if (this === void 0 || this === null) {
+      throw new TypeError();
+    }
+
+    var t = Object(this);
+    var len = t.length >>> 0;
+    if (typeof fun !== 'function') {
+      throw new TypeError();
+    }
+
+    var res = [];
+    var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
+    for (var i = 0; i < len; i++) {
+      if (i in t) {
+        var val = t[i];
+
+        // NOTE: Technically this should Object.defineProperty at
+        //       the next index, as push can be affected by
+        //       properties on Object.prototype and Array.prototype.
+        //       But that method's new, and collisions should be
+        //       rare, so use the more-compatible alternative.
+        if (fun.call(thisArg, val, i, t)) {
+          res.push(val);
+        }
+      }
+    }
+
+    return res;
+  };
+}
+
+var cellSizeX = 0.002;
+var cellSizeY = 0.002;
 
 var leftXBound = -74.268;
 var rightXBound = -73.70;
@@ -36,7 +73,15 @@ function countPoints(json) {
   return bins;
 }
 
-function drawHeatmap(group, proj, json, color) {
+function drawHeatmap(group, proj, oldJson, color, filterBy) {
+  console.log(filterBy)
+  var json = {
+    type: 'FeatureCollection',
+    features: oldJson.features.filter(function(e) {
+      if ('All' in filterBy) { return true; }
+      return (e.properties.cuisine in filterBy);
+    })
+  };
   var bins = countPoints(json);
 
   var max = 0;
@@ -78,21 +123,22 @@ function drawHeatmap(group, proj, json, color) {
       // attr('height', tPos[1] - tNewPos[1]).
       // attr('fill', color).
       // attr('opacity', d3.interpolateNumber(0.3, 1.0)(count*1.0 / max));
-      
-      heatmapGraph.append('circle').
+
+      heatmapGraph.
+      append('circle').
       attr('cx', tPos[0]).
       attr('cy', tPos[1]).
       attr('r', (tNewPos[0] - tPos[0])).
       attr('fill', color).
       attr('opacity', d3.interpolateNumber(0.3, 1.0)(count*1.0 / max));
-      
+
       // heatmapGraph.append('circle').
       // attr('cx', tPos[0]).
       // attr('cy', tPos[1]).
       // attr('r', (tNewPos[0] - tPos[0])/ 2).
       // attr('fill', color).
       // attr('opacity', d3.interpolateNumber(0.2, 0.6)(count*1.0 / max));
-      
+
     }
   }
 }
