@@ -17,6 +17,7 @@ var activateCuisine = function(name) {
 			cuisines.item(i).className = 'cuisine active';
 		}
 	}
+	window.redrawThings({cuisine: name});
 }
 
 var activateDataset = function(name) {
@@ -26,6 +27,7 @@ var activateDataset = function(name) {
 			dsets.item(i).previousSibling.className = 'checkbox check is-checked';
 		}
 	}
+	window.redrawThings({dataset: name});
 }
 
 var main = function() {
@@ -51,6 +53,7 @@ var main = function() {
 				}
 			};
 			$(this).addClass('active')
+			// activateDataset(chosen.innerHTML);
 		} else { //deselecting an item
 			$(this).removeClass('active');
 		}

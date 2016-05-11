@@ -1,8 +1,8 @@
 'use strict';
 /*global $:false, d3: false*/
 
-var cellSizeX = 0.01;
-var cellSizeY = 0.01;
+var cellSizeX = 0.001;
+var cellSizeY = 0.001;
 
 var leftXBound = -74.268;
 var rightXBound = -73.70;
@@ -71,13 +71,28 @@ function drawHeatmap(group, proj, json, color) {
 
       var tNewPos = proj([x1, y1]);
 
-      heatmapGraph.append('rect').
-      attr('x', tPos[0]).
-      attr('y', tPos[1]).
-      attr('width', tNewPos[0] - tPos[0]).
-      attr('height', tPos[1] - tNewPos[1]).
+      // heatmapGraph.append('rect').
+      // attr('x', tPos[0]).
+      // attr('y', tPos[1]).
+      // attr('width', tNewPos[0] - tPos[0]).
+      // attr('height', tPos[1] - tNewPos[1]).
+      // attr('fill', color).
+      // attr('opacity', d3.interpolateNumber(0.3, 1.0)(count*1.0 / max));
+      
+      heatmapGraph.append('circle').
+      attr('cx', tPos[0]).
+      attr('cy', tPos[1]).
+      attr('r', (tNewPos[0] - tPos[0])).
       attr('fill', color).
       attr('opacity', d3.interpolateNumber(0.3, 1.0)(count*1.0 / max));
+      
+      // heatmapGraph.append('circle').
+      // attr('cx', tPos[0]).
+      // attr('cy', tPos[1]).
+      // attr('r', (tNewPos[0] - tPos[0])/ 2).
+      // attr('fill', color).
+      // attr('opacity', d3.interpolateNumber(0.2, 0.6)(count*1.0 / max));
+      
     }
   }
 }

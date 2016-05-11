@@ -19,22 +19,24 @@ function drawRestaurantHeatmap(dataG, projection, restJson) {
   drawHeatmap(dataG, projection, restJson, '#ff0000');
   // dataG.selectAll('path').data(restJson.features).enter().append('path')
   //     .attr('d', restPath)
-  //     .style('fill', 'white')
-  //     .style('stroke-width', '1')
-  //     .style('stroke', 'black');
+  //     .style('fill', 'red')
+  //     .style('stroke-width', '0.5')
+  //     .style('stroke', 'black')
+  //     .attr('opacity', 0.5);
+      
 }
 
 function drawSubwayNodes(dataG, projection, dataJson) {
-  // var subwayPath = d3.geo.path()
-  //   .projection(projection);
-  //
-  // dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
-  //     .attr('d', subwayPath)
-  //     .style('fill', 'blue')
-  //     .style('stroke-width', '1')
-  //     .style('stroke', 'black');
+  var subwayPath = d3.geo.path()
+    .projection(projection);
+  
+  dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
+      .attr('d', subwayPath)
+      .style('fill', 'blue')
+      .style('stroke-width', '1')
+      .style('stroke', 'black');
 
-  drawHeatmap(dataG, projection, dataJson, '#0000ff');
+  // drawHeatmap(dataG, projection, dataJson, '#0000ff');
 }
 
 function drawFarmersMarketNodes(dataG, projection, dataJson) {
@@ -57,8 +59,9 @@ function drawMedianIncomeOverlay(dataG, projection, dataJson) {
   dataG.append('g').selectAll('path').data(dataJson.features).enter().append('path')
       .attr('d', medInc)
       .style('fill', function(a) {
-        return d3.interpolateRgb("#ffffff", "#777777")(a.properties.MHI / 60000.0)
+        return d3.interpolateRgb("#ffffff", "#cccccc")(a.properties.MHI / 60000.0)
       })
+      // .style('fill', "white")
       // .style('stroke-width', '1')
       .style('stroke', 'black');
 }
@@ -73,7 +76,37 @@ function drawStateBoundaries(dataG, _path, projection, dataJson) {
       .style('stroke', 'black');
 }
 
+var Data = {
+  restaurants: null,
+  coarseBoundaries: null,
+  census: null,
+  farmersMarkets: null,
+  subway: null
+};
 
+var State = {
+  cuisine: null,
+  dataset: null
+}
+
+window.loaded = false;
+
+window.redrawThings = function(params) {
+  if ("cuisine" in params) {
+    State.cuisine = params.cuisine
+  }
+  if ("dataset" in params) {
+    State.dataset = params.dataset
+  }
+  
+  console.log(State);
+  
+  dataG.selectAll('g').remove();
+  
+  drawStateBoundaries(dataG, path, projection, Data.coarseBoundaries);
+  drawMedianIncomeOverlay(dataG, projection, Data.census);
+  drawRestaurantHeatmap(dataG, projection, Data.restaurants);
+}
 
 function zoomed() {
   // console.log(zoom.scale());
@@ -136,15 +169,19 @@ function setupMap() {
     projection = d3.geo.mercator().center(center)
       .scale(scale).translate(offset);
 
+    
     d3.json(RESTAURANT_POINT_PATH, function(restJson) {
       d3.json(SUBWAY_PATH, function(subwayJson) {
         d3.json(FARMERS_MARKET_PATH, function(farmersMarketJson) {
           d3.json(MEDIAN_INCOMES_PATH, function(medIncJson) {
-            drawStateBoundaries(dataG, path, projection, districtJson)
-            // drawMedianIncomeOverlay(dataG, projection, medIncJson)
-            drawRestaurantHeatmap(dataG, projection, restJson);
+            Data.restaurants = restJson;
+            Data.subway = subwayJson;
+            Data.census = medIncJson;
+            Data.farmersMarkets = farmersMarketJson;
+            Data.coarseBoundaries = districtJson;
+            window.loaded = true;
             // drawSubwayNodes(dataG, projection, subwayJson);
-            drawFarmersMarketNodes(dataG, projection, farmersMarketJson)
+            // drawFarmersMarketNodes(dataG, projection, farmersMarketJson)
           });
         });
       });
