@@ -143,6 +143,7 @@ var main = function() {
 	});
 
 	$('#scratch-preset').click(function() {
+		window.redrawThings({});
 		hideWelcome();
 	});
 }
