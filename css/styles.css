@@ -255,9 +255,35 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 .presets {
   width:450px;
   height:90px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:-15px;
+/*  margin-left:auto;
+  margin-right:auto;*/
 }
+
+.welcome-right, .welcome-left {
+  position:relative;
+  display:inline;
+}
+
+.welcome-left {
+  width:250px;
+  height:325px;
+  margin-top:-10px;
+  margin-left:10px;
+  /*background:red;*/
+  background-image:url('StatueOfLiberty.svg');
+  background-repeat: no-repeat;
+  float:left;
+}
+
+.welcome-right {
+  float:right;
+  width:600px;
+  height:325px;
+  padding-left:40px;
+  border-left:1px solid white;
+}
+
 
 /*HELP PANEL*/
 
@@ -276,20 +302,21 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .welcome-panel {
-  width:650px;
+  width:930px;
+  padding:30px;
 }
 
-.filter-help-panel > h2, .welcome-panel > h2, .map-help-panel > h2 {
+.filter-help-panel > h2, .welcome-panel > h2, .welcome-right > h2 {
   font-size:3em;
 }
 
-.filter-help-panel > p, .welcome-panel > p, .map-help-panel > p {
+.filter-help-panel > p, .welcome-panel > p, .welcome-right > p {
   color:white;
   font-size:1.2em;
 }
 
 
-.filter-help-panel i, .welcome-panel i, .map-help-panel i {
+.filter-help-panel i, .map-help-panel i {
   color:white;
 }
 
