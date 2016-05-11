@@ -42,8 +42,8 @@ var main = function() {
 		var chosen = document.getElementsByClassName("cuisine active");
 		var numChosen = chosen.length;
 
-		if (!$(this).hasClass('active')) {
-			if (numChosen >= 1) {
+		if (!$(this).hasClass('active')) { //selecting an item
+			if (numChosen >= 1) { //switch selection
 				for (var i=0; i<chosen.length; i++) {
 					if (chosen.item(i).className.indexOf('active') > -1) {
 						chosen.item(i).className = 'cuisine';
@@ -51,7 +51,7 @@ var main = function() {
 				}
 			};
 			$(this).addClass('active')
-		} else {
+		} else { //deselecting an item
 			$(this).removeClass('active');
 		}
 	});
@@ -59,7 +59,7 @@ var main = function() {
 	$('.checkbox').click(function() {
 		var checks = document.getElementsByClassName("checkbox is-checked");
 		var numChecked = checks.length;
-		if (!$(this).hasClass('is-checked')) {
+		if (!$(this).hasClass('is-checked')) { //selecting an item
 			if (numChecked >= 1) { //switch selection
 				for (var i=0; i<checks.length; i++) {
 					if (checks.item(i).className.indexOf('is-checked') > -1) {
@@ -68,7 +68,7 @@ var main = function() {
 				}
 			} 
 			$(this).toggleClass('is-checked');
-		} else {
+		} else { //deselecting an item
 			$(this).removeClass('is-checked');
 		}
 	});

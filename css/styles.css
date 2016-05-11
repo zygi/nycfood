@@ -31,6 +31,7 @@ html, body {
     height: 100%;
     overflow: hidden;
     color:#5e666d;
+    font-family: 'Lato', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -46,7 +47,6 @@ html, body {
 }
 
 h2 {
-  /*text-align: center;*/
   font-family:"Dosis", sans-serif;
   font-weight:400;
   text-transform: uppercase;
@@ -65,9 +65,19 @@ h3 {
 
 p {
   font-family:"Lato",sans-serif;
-  /*font-weight:300;*/
   color:#5e666d;
   font-size:0.9em;
+}
+
+ol {
+  margin-top:15px;
+  color:#dacabc;
+  font-size: 1.3em;
+  font-family:'Dosis', sans-serif;
+}
+
+ol li {
+  margin-bottom:15px;
 }
 
 .container-fluid {
@@ -88,7 +98,7 @@ p {
   padding: 0px;
 }
 
-.filters, .facts {
+.filters {
   background:#5e666d;
   font-family:'Lato',sans-serif;
 }
