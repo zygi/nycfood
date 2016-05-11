@@ -256,32 +256,37 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   width:450px;
   height:90px;
   margin-left:-15px;
-/*  margin-left:auto;
-  margin-right:auto;*/
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .welcome-right, .welcome-left {
   position:relative;
-  display:inline;
+  /*display:inline;*/
 }
 
 .welcome-left {
-  width:250px;
-  height:325px;
+  width:150px;
+  height:175px;
+  background-size:contain;
   margin-top:-10px;
-  margin-left:10px;
-  /*background:red;*/
+  margin-right:auto;
+  margin-left:auto;
+  transform:translateX(8%);
+  -webkit-transform:translateX(8%);
   background-image:url('StatueOfLiberty.svg');
   background-repeat: no-repeat;
-  float:left;
+  /*float:left;*/
 }
 
 .welcome-right {
-  float:right;
   width:600px;
   height:325px;
-  padding-left:40px;
-  border-left:1px solid white;
+  padding-top:20px;
+  margin-right:auto;
+  margin-left:auto;
+
+  border-top:2px solid white;
 }
 
 
@@ -302,7 +307,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 .welcome-panel {
-  width:930px;
+  width:670px;
   padding:30px;
 }
 
