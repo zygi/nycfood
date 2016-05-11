@@ -101,7 +101,7 @@ p {
 
 .faded {
   pointer-events:none;
-  opacity:0.05;
+  opacity:0.02;
 }
 
 .panel-title {
@@ -183,7 +183,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 }
 
 
-.cuisine-panel > a.active, .preset.active {
+.cuisine-panel > a.active {
   -webkit-animation: wiggle 0.3s ease-out;
   -moz-animation: wiggle 0.3s ease-out;
   -o-animation: wiggle 0.3s ease-out;
@@ -247,7 +247,6 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   height:90px;
   margin-left:auto;
   margin-right:auto;
-  margin-bottom:20px;
 }
 
 /*HELP PANEL*/
@@ -265,7 +264,10 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
 
   background:#5e666d;
   border-radius:10px;
-  /*box-shadow:inset 0 0 5px white;*/
+}
+
+.welcome-panel {
+  width:700px;
 }
 
 .filter-help-panel > h2, .welcome-panel > h2 {

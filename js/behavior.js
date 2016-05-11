@@ -1,8 +1,32 @@
 // var cuisineTypes = ['Restaurants', 'Income', 'Property Value', 'Subway Stops'];
 var cuisineTypes = ['Chinese', 'Japanese', 'Vietnamese', 'Thai', 'Korean',
-					'American','Southern','Soul Food','Cajun', 'Jamaican',
+					'American', 'Italian', 'Southern','Soul Food','Cajun', 'Jamaican',
 					'Irish','Scottish','English','Pub Food','Fast Food', 'African',
 					'Cuban','German','Other'];
+
+var hideWelcome = function() {
+	$('.welcome-panel').hide();
+	$('#map').removeClass('faded');
+	$('#right').removeClass('faded');
+}
+
+var activateCuisine = function(name) {
+	var cuisines = document.getElementsByClassName("cuisine");
+	for (var i=0; i<cuisines.length; i++) {
+		if (cuisines.item(i).firstChild.innerHTML == name) {
+			cuisines.item(i).className = 'cuisine active';
+		}
+	}
+}
+
+var activateDataset = function(name) {
+	var dsets = document.getElementsByClassName("dataset");
+	for (var i=0; i<dsets.length; i++) {
+		if (dsets.item(i).innerHTML.indexOf(name) > -1) {
+			dsets.item(i).previousSibling.className = 'checkbox check is-checked';
+		}
+	}
+}
 
 var main = function() {
 
@@ -47,11 +71,24 @@ var main = function() {
 	});
 
 	$('#welcome-hide').click(function() {
-		$('.welcome-panel').hide();
-		$('#map').removeClass('faded');
-		$('#right').removeClass('faded');
+		hideWelcome();
 	});
 
+	$('#fast-food-preset').click(function() {
+		activateCuisine('Fast Food');
+		activateDataset('Property Value');
+		hideWelcome();
+	});
+
+	$('#italian-preset').click(function() {
+		activateCuisine('Italian');
+		activateDataset('Neighborhoods');
+		hideWelcome();
+	});
+
+	$('#scratch-preset').click(function() {
+		hideWelcome();
+	});
 }
 
 $(document).ready(main());
