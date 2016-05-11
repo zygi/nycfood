@@ -306,7 +306,7 @@ i.fa-question-circle:hover, i.fa-times-circle:hover {
   padding:30px;
 }
 
-.filter-help-panel > h2, .welcome-panel > h2, .welcome-right > h2 {
+.filter-help-panel > h2, .map-help-panel > h2, .welcome-right > h2 {
   font-size:3em;
 }
 
